@@ -36,7 +36,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.google.android.material.snackbar.Snackbar;
 import com.packageID.projectID.di.component.DaggerActivityComponent;
 import com.packageID.projectID.di.module.RoomModule;
-import com.packageID.projectID.root.DigitalBankApplication;
+import com.packageID.projectID.root.ProjectIDApplication;
 import com.packageID.projectID.R;
 import com.packageID.projectID.di.component.ActivityComponent;
 import com.packageID.projectID.di.module.ActivityModule;
@@ -72,7 +72,7 @@ public abstract class BaseActivity extends AppCompatActivity
         mActivityComponent = DaggerActivityComponent.builder()
                 .activityModule(new ActivityModule(this))
                 .roomModule(new RoomModule(getApplication()))
-                .applicationComponent(((DigitalBankApplication) getApplication()).getComponent())
+                .applicationComponent(((ProjectIDApplication) getApplication()).getComponent())
                 .build();
 
         initConectionStatus();
@@ -244,7 +244,7 @@ public abstract class BaseActivity extends AppCompatActivity
     public  void initConectionStatus() {
         intentFilter = new IntentFilter(CONNECTIVITY_ACTION);
         mConnectivityReceiver = new NetworkChangeReceiver();
-        isConnected = NetworkUtils.getConnectivityStatus(DigitalBankApplication.getInstance().getApplicationContext()) > 0;
+        isConnected = NetworkUtils.getConnectivityStatus(ProjectIDApplication.getInstance().getApplicationContext()) > 0;
         handleNetworkStatus(isConnected);
     }
 
@@ -285,7 +285,7 @@ public abstract class BaseActivity extends AppCompatActivity
     @Override
     public void registerConnectivityReceiver() {
         try {
-            DigitalBankApplication.getInstance().getApplicationContext().registerReceiver(mConnectivityReceiver, intentFilter);
+            ProjectIDApplication.getInstance().getApplicationContext().registerReceiver(mConnectivityReceiver, intentFilter);
         } catch (Exception e) {
             e.printStackTrace();
             Log.d("Register Error", e.getMessage());
@@ -296,7 +296,7 @@ public abstract class BaseActivity extends AppCompatActivity
     public void unregisterConnectivityReceiver() {
         if (mConnectivityReceiver != null) {
             try {
-                DigitalBankApplication.getInstance().getApplicationContext().unregisterReceiver(mConnectivityReceiver);
+                ProjectIDApplication.getInstance().getApplicationContext().unregisterReceiver(mConnectivityReceiver);
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.d("Register Error", e.getMessage());

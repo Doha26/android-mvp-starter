@@ -33,7 +33,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 
 @SuppressLint("Registered")
-public class DigitalBankApplication extends Application {
+public class ProjectIDApplication extends Application {
 
 
     private ApplicationComponent mApplicationComponent;
@@ -42,7 +42,7 @@ public class DigitalBankApplication extends Application {
     @Inject
     CalligraphyConfig mCalligraphyConfig;
     
-    private static DigitalBankApplication mInstance;
+    private static ProjectIDApplication mInstance;
 
     @Override
     public void onCreate() {
@@ -76,7 +76,7 @@ public class DigitalBankApplication extends Application {
     public Context getAppContext() {
         return mInstance.getApplicationContext();
     }
-    public static synchronized DigitalBankApplication getInstance() {
+    public static synchronized ProjectIDApplication getInstance() {
         return mInstance;
     }
 

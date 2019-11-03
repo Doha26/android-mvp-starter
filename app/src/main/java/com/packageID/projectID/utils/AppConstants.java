@@ -18,7 +18,7 @@ public final class AppConstants {
     public static final String STATUS_CODE_FAILED = "FAILLED";
     public static final int API_STATUS_CODE_LOCAL_ERROR = 0;
     public static final String DB_NAME = "DigitBank2019-db";
-    public static final String PREF_NAME = "DigitalBank_pref";
+    public static final String PREF_NAME = "ProjectID_pref";
     public static final long NULL_INDEX = -1L;
     public static final String SEED_DATABASE_OPTIONS = "seed/options.json";
     public static final String SEED_DATABASE_QUESTIONS = "seed/questions.json";

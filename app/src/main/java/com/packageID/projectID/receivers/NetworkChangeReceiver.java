@@ -14,7 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.packageID.projectID.root.DigitalBankApplication;
+import com.packageID.projectID.root.ProjectIDApplication;
 import com.packageID.projectID.utils.NetworkUtils;
 
 public class NetworkChangeReceiver extends BroadcastReceiver {
@@ -32,9 +32,9 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
         //NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
         // boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
-         isConnected = NetworkUtils.getConnectivityStatus(DigitalBankApplication.getInstance().getApplicationContext()) > 0;
+         isConnected = NetworkUtils.getConnectivityStatus(ProjectIDApplication.getInstance().getApplicationContext()) > 0;
 
-        Log.d("CONORI", String.valueOf(NetworkUtils.getConnectivityStatus(DigitalBankApplication.getInstance().getApplicationContext())));
+        Log.d("CONORI", String.valueOf(NetworkUtils.getConnectivityStatus(ProjectIDApplication.getInstance().getApplicationContext())));
 
         if (connectivityReceiverListener != null) {
             connectivityReceiverListener.onNetworkConnectionChanged(isConnected);
@@ -45,7 +45,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
        // ConnectivityManager cm = (ConnectivityManager) MyApplication.getInstance().getAppContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         //NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
        // return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
-        return NetworkUtils.getConnectivityStatus(DigitalBankApplication.getInstance().getAppContext().getApplicationContext()) > 0;
+        return NetworkUtils.getConnectivityStatus(ProjectIDApplication.getInstance().getAppContext().getApplicationContext()) > 0;
     }
 
     public static void connectionNotAvaillable() {

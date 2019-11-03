@@ -13,7 +13,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.packageID.projectID.data.DataManager;
-import com.packageID.projectID.root.DigitalBankApplication;
+import com.packageID.projectID.root.ProjectIDApplication;
 import com.packageID.projectID.data.local.db.repository.SampleItem.SampleItemRepository;
 import com.packageID.projectID.di.ApplicationContext;
 import com.packageID.projectID.di.module.ApplicationModule;
@@ -30,7 +30,7 @@ public interface ApplicationComponent {
 
 
     // Injecting applicaton class
-    void inject(DigitalBankApplication aplication);
+    void inject(ProjectIDApplication aplication);
 
 
     // Injecting Service
