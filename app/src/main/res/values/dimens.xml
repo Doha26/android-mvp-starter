@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created By Foujeu Pavel <foujeupavel@gmail.com> on 13/9/2019.
+  ~ Copyright (c) Variance technologies. All rights reserved.
+  ~ Last modified 9/13/19 2:15 PM
+  ~
+  ~
+  ~ <Class description here>
+  -->
+
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+</resources>

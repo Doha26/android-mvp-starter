@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DigitalBank</string>
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Something wrong happened!</string>
+    <string name="some_error">Some Error Occurred!</string>
+    <string name="connection_error">Internet connection lost!</string>
+    <string name="retry_text">Retry</string>
+    <string name="good_connected_to_internet">Connected to internet</string>
+    <string name="sorry_not_connected">No internet connection</string>
+</resources>
