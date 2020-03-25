@@ -1,2 +1,2 @@
-# android-mvp-boillerplate
+# android-mvp-starter
 I have created this repository to have a starting point based on MVP architecture in all my Android Apps. 
